@@ -1,0 +1,92 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        body {
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .form-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+            padding: 20px;
+        }
+
+            .form-box h2 {
+                margin-top: 0px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            .form-box .form-group label {
+                font-weight: bold;
+            }
+
+            .form-box .form-group input {
+                border-radius: 5px;
+                padding: 10px;
+                border: none;
+                box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+                width: 100%;
+                margin-bottom: 20px;
+            }
+
+                .form-box .form-group input:focus {
+                    outline: none;
+                    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5) inset;
+                }
+
+            .form-box .form-group button[type="submit"] {
+                background-color: #007bff;
+                border: none;
+                color: #ffffff;
+                font-weight: bold;
+                padding: 10px;
+                border-radius: 5px;
+                width: 100%;
+            }
+
+                .form-box .form-group button[type="submit"]:hover {
+                    background-color: #0056b3;
+                    cursor: pointer;
+                }
+                body {
+  background-image: url('@Url.Content("~/Content/login.jpg")');
+  background-size: cover;
+}
+
+    </style>
+    
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+                <div class="form-box">
+                    <form action="@Url.Action("Login", "Home")" method="post">
+                        <div class="mb-3">
+                            <label for="username" class="form-label">Username</label>
+                            <input type="text" class="form-control" id="username" name="username" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="password" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="password" name="password" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="margin-left: 40%;margin-top:10px">Login</button>
+                    </form>
+                    <a href="/Home/Register">New Registration</a>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
